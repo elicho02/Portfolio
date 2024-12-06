@@ -1,0 +1,93 @@
+@import url(common.css);
+@import url(font.css);
+
+
+::-webkit-scrollbar {display: none;}
+
+
+/* cursor */
+@media only screen and (min-width:769px) {
+	body, a{cursor: none;}
+	.cursor{
+		position: fixed;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+	}
+	.cursor--small{
+		width: 18px;
+		height: 18px;
+		left: -9px;
+		top: -9px;
+		border-radius: 50%;
+		z-index: 99;
+		background: #EDDFCD;
+    mix-blend-mode: difference;
+	}
+	.cursor--canvas{
+		width: 100vw;
+		height: 100vh;
+		z-index: 100;
+	}
+}
+
+
+@media only screen and (max-width:768px) {
+	body{cursor: none;}
+	.cursor--small,
+  .cursor--canvas{display: none;}
+}
+
+
+body{
+  font-family: 'Pretendard';
+  font-size: 16px;
+  line-height: 25px;
+  color: #EDDFCD;
+  background: transparent;
+  text-transform: capitalize;
+  position: relative;
+  animation: 1s fade;
+  -ms-overflow-style: none;
+}
+@keyframes fade{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+h2{
+  font-family: 'Bebas','Pretendard';
+  font-size: 110px;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+h3{
+  font-family: 'Bebas';
+  font-size: 60px;
+  line-height: 60px;
+}
+h4{
+  font-family: 'Pretendard';
+  font-size: 35px;
+  line-height: 50px;
+}
+
+/* detail */
+.detail{
+  display: none;
+  width: 1200px;
+  height: 900px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9999;
+}
+.detail iframe{
+  width: 100%;
+  height: 100%;
+}
+.detail img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

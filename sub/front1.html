@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim min song Portfolio</title>
+    <link rel="shortcut icon" href="../img/homepage.ico" />
+    <link rel="stylesheet" href="../css/front.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- mouse -->
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas"></canvas>
+
+    <nav>
+      <ul class="top">
+        <li>
+          <div><img src="../img/foot.svg" alt="" /></div>
+          <p>kim min song<br />Portfolio</p>
+        </li>
+        <li class="logo">
+          <a href="../index.html" class="link"><div></div></a>
+        </li>
+        <li class="another-link">
+          <a href="front2.html">
+            <p>Next project</p>
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="../index.html#frontend"
+      ><button class="link"><i class="ri-close-line"></i></button
+    ></a>
+
+    <div class="container">
+      <div class="pcVer">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide title">
+              <div>
+                <div>
+                  <h2>blog project</h2>
+                  <a href="https://react-blog.herokuapp.com/" target="_blank" class="another-link">site view<i class="ri-arrow-right-line"></i></a>
+                </div>
+                <div class="bottom">
+                  <div>
+                    <p>year</p>
+                    <p>2023</p>
+                  </div>
+                  <div>
+                    <p>Tool</p>
+                    <p>React, router, redux, json server, heroku</p>
+                  </div>
+                  <div>
+                    <p>work</p>
+                    <p>
+                      포스트 검색 기능과 목록 Pagination<br>
+                      로그인 전에는 공개글만 확인 가능<br>
+                      로그인 후 관리자 모드로 포스트 관리 가능<br>
+                      관리자 모드로 포스트 공개/비공개 작성
+                    </p>
+                  </div>
+                  <div>
+                    <p>Company</p>
+                    <p>100% 개인작업</p>
+                  </div>
+                </div>
+                <div class="back"></div>
+                <img src="../front/blog.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide content1">
+              <h4>
+                일상을 기록할 수 있는 블로그 프로젝트입니다<br>
+                간단한 홈 화면과 블로그, 관리자 메뉴로 구성하였고<br>
+                json server로 데이터베이스를 구현하였습니다
+              </h4>
+              <div class="overview">
+                <p>
+                  <b>로그인 안했을 때</b><br>
+                  <em>
+                    공개 포스트 목록 확인<br>
+                    공개 포스트 자세히 보기<br>
+                    자세히 볼 때 머무는 시간초
+                  </em>
+                </p>
+                <p>
+                  <b>로그인 했을 때</b><br>
+                  <em>
+                    비밀 포스트까지 확인<br>
+                    비밀/공개 포스트 선택 추가<br>
+                    자세히 볼 때 머무는 시간초
+                  </em>
+                </p>
+                <p>
+                  <b>오류가 있을 때</b><br>
+                  <em>
+                    포스트 추가/수정시 내용이<br>
+                    비어있거나 변경사항 없을 때<br>
+                    DB를 불러오지 못할 때
+                  </em>
+                </p>
+              </div>
+              <div class="rightImg" style="background: #c3beba">
+                <img src="../front/front1-3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide content2">
+              <div class="frontVideo">
+                <div>
+                  <video muted autoplay loop playsinline data-keepplaying>
+                    <source src="../front/blog.mp4" type="video/mp4">
+                    <strong>Your browser does not support the video tag.</strong>
+                  </video>
+                </div>
+              </div>
+              <div class="frontBack">
+                <img src="../front/blog.png" alt="">
+                <div class="frontImgBack"></div>
+              </div>
+            </div>
+            <div class="swiper-slide content3" style="background: #c3beba">
+              <div>
+                <img id="front1" src="../front/front1.png" alt="">
+                <img id="front2" src="../front/front1-1.png" alt="">
+                <img id="front3" src="../front/front1-2.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide content4">
+              <div></div>
+              <a href="https://react-blog.herokuapp.com/" target="_blank"><input type="button" value="site view" class="another-link"><a>
+              <img src="../front/front1.png" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobileVer">
+        <div class="title">
+          <div>
+            <div>
+              <h2>blog<br>project</h2>
+            </div>
+            <div class="bottom">
+              <div>
+                <p>year</p>
+                <p>2023</p>
+              </div>
+              <div>
+                <p>Tool</p>
+                <p>React, router, redux, json server, heroku</p>
+              </div>
+              <div>
+                <p>work</p>
+                <p>
+                  포스트 검색 기능과 목록 Pagination<br>
+                  로그인 전에는 공개글만 확인 가능<br>
+                  로그인 후 관리자 모드로 포스트 관리 가능<br>
+                  관리자 모드로 포스트 공개/비공개 작성
+                </p>
+              </div>
+              <div>
+                <p>Company</p>
+                <p>100% 개인작업</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="../front/blog.png" alt="" />
+        <h4>
+          일상을 기록할 수 있는 블로그 프로젝트입니다<br>
+          간단한 홈 화면과 블로그, 관리자 메뉴로 구성하였고<br>
+          json server로 데이터베이스를 구현하였습니다
+        </h4>
+        <div class="overview">
+          <p>
+            <b>로그인 안했을 때</b><br>
+            <em>
+              공개 포스트 목록 확인<br>
+              공개 포스트 자세히 보기<br>
+              자세히 볼 때 머무는 시간초
+            </em>
+          </p>
+          <p>
+            <b>로그인 했을 때</b><br>
+            <em>
+              비밀 포스트까지 확인<br>
+              비밀/공개 포스트 선택 추가<br>
+              자세히 볼 때 머무는 시간초
+            </em>
+          </p>
+          <p>
+            <b>오류가 있을 때</b><br>
+            <em>
+              포스트 추가/수정시 내용이<br>
+              비어있거나 변경사항 없을 때<br>
+              DB를 불러오지 못할 때
+            </em>
+          </p>
+        </div>
+        <div class="mobile" style="background: #c3beba"><img src="../front/front1.png" alt=""/></div>
+        <div class="mobile" style="background: #252422"><img src="../front/front1-1.png" alt="" /></div>
+        <div class="mobile" style="background: #c3beba"><img src="../front/front1-2.png" alt="" /></div>
+      </div>
+    </div>
+
+    <!-- Script Source -->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="../js/prefixfree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/mouse.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script src="../js/sub.js"></script>
+  </body>
+</html>

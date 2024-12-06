@@ -1,0 +1,178 @@
+.mockup {
+    z-index: 1;
+    border: 1px solid #ddd;
+    width: 430px;
+    height: 850px;
+    position: relative;
+    border-radius: 60px;
+    background: rgb(236, 236, 236);
+}
+
+.mockup:before {
+    content: "";
+    position: absolute;
+    width: 97%;
+    height: 98.5%;
+    border-radius: 53px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+}
+
+.mockup .mobile-mockup {
+    background: #000;
+    position: absolute;
+    width: 97%;
+    height: 98.5%;
+    border-radius: 53px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mockup .mobile-mockup .iframe-url {
+    position: absolute;
+    width: 398px;
+    height: 780px;
+    color: #fff;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.mockup .mobile-mockup .iframe-url iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 45px 45px;
+}
+
+.mockup .mobile-mockup .camera {
+    width: 400px;
+    height: 42px;
+    color: #fff;
+    border-radius: 45px 45px 0 0;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.mockup .mobile-mockup .camera p {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 35px;
+    top: -7px;
+}
+
+.mockup .mobile-mockup .camera span {
+    position: absolute;
+}
+
+.mockup .mobile-mockup .camera span:nth-of-type(1) {
+    width: 80px;
+    height: 7px;
+    border-radius: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mockup .mobile-mockup .camera span:nth-of-type(2) {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+}
+
+.mockup .mobile-mockup .camera span:nth-of-type(3) {
+    width: 22px;
+    height: 13px;
+    border-radius: 3px;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+    background: #fff;
+}
+
+.mockup .mobile-mockup .camera span:nth-of-type(3):before {
+    content: "";
+    width: 3px;
+    height: 5px;
+    border-radius: 0 30px 30px 0;
+    background: #fff;
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mockup .mobile-mockup .home-btn {
+    position: absolute;
+    width: 130px;
+    height: 6px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50px;
+    mix-blend-mode: difference;
+    z-index: 999;
+}
+
+.mockup .mobile-mockup .power {
+    position: absolute;
+    right: -7px;
+    top: 87px;
+}
+
+.mockup .mobile-mockup .power span {
+    position: absolute;
+    width: 7px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    /* background: blue; */
+}
+
+.mockup .mobile-mockup .volume {
+    position: absolute;
+    width: 7px;
+    height: 150px;
+    top: 87px;
+    left: -14px;
+}
+
+.mockup .mobile-mockup .volume span {
+    position: absolute;
+    width: 7px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    transform: rotateY(180deg);
+    /* background-color: blue; */
+}
+
+.mockup .mobile-mockup .volume span:nth-child(1) {
+    top: 0;
+    height: 25px;
+}
+
+.mockup .mobile-mockup .volume span:nth-child(2) {
+    bottom: 55px;
+}
+
+.mockup .mobile-mockup .volume span:nth-child(3) {
+    bottom: 0;
+}
+
+.mockup .mobile-mockup .volume span,
+.mockup .mobile-mockup .power span {
+    background-color: rgb(202, 202, 202);
+}

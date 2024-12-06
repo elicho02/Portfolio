@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo-stroke-ani</title>
+    <style>
+        body {
+            background-color: #000;
+            position: absolute;
+            left: 40%;
+            top: 30%;
+        }
+
+        @keyframes dash-ani {
+            from {
+                stroke-dashoffset: 700;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        circle {
+            fill: #FB4586;
+            stroke: #FB4586;
+            stroke-width: 10;
+            stroke-dasharray: 695.6295776367188;
+            /* 그어진 총길이 -> 숫자가 커지면 길어져서 원의 둘레만큼 길이가 됨 */
+            stroke-dashoffset: 0;
+            /* stroke-dasharray 로 그려진 시작위치라고 생각하면 됨, 700만큼 밀려서 안 보이게 됨, 0부터 700까지 움직이면 선이 그어지는 느낌 */
+            animation: dash-ani 2s;
+        }
+
+        path {
+            fill: transparent;
+            stroke: #FB4586;
+            stroke-width: 15;
+            stroke-dasharray: 695.6295776367188;
+            stroke-dashoffset: 0;
+            animation: dash-ani 2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="248" height="253" viewBox="0 0 248 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_b_62_2)">
+            <path
+                d="M239.5 114.272C241.256 185.329 178.608 223.001 122.258 244.501C64.3503 222.387 8 178.053 8 114.272C8 50.4906 83.5576 23.3572 122.258 81.7147C172 22.9999 238.33 66.9159 239.5 114.272Z"
+                stroke="#FB4586" stroke-width="15" />
+            <path d="M14.1429 122.258H75.5719" stroke="#FB4586" stroke-width="15" stroke-linecap="round" />
+            <path d="M122 79L122 233" stroke="#FB4586" stroke-width="15" stroke-linecap="round" />
+            <circle cx="191.058" cy="20.2858" r="12.2858" fill="#FB4586" stroke="#FB4586" stroke-width="15" />
+        </g>
+        <defs>
+            <filter id="filter0_b_62_2" x="-3.5" y="-3.5" width="254.536" height="260.029" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_62_2" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_62_2" result="shape" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- 패스의 길이를 아는 방법 -->
+    <script>
+        console.log(document.querySelector('path').getTotalLength());
+    </script>
+
+
+</body>
+
+</html>
