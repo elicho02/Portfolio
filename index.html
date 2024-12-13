@@ -14,11 +14,12 @@
   <meta property="og:url" content="com">
   <meta property="og:title" content="Portfolio">
   <meta property="og:type" content="website">
-  <!-- <meta property="og:image" content="img/front.png"> -->
+  <meta property="og:image" content="img/front.png">
   <meta property="og:description" content="2024 Portfolio">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/jquery.fullpage.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -32,7 +33,7 @@
   </div>
 
 
-  <div class="intro content-hidden">
+<!--   <div class="intro content-hidden">
     <div class="loading">
       <div>
             <svg width="248" height="253" viewBox="0 0 248 253" fill="none" xmlns="http://www.w3.org/2000/svg" class="intro-logo">
@@ -56,7 +57,7 @@
             </svg>
       </div>
     </div>
-  </div>
+  </div> -->
   
 
   <nav>
@@ -134,12 +135,6 @@
             <div id="min"></div>
             <div id="sec"></div>
           </div>
-    <div class="mainContent">
-      <div class="main">
-        
-
-      </div>
-    </div>
   </header>
   
 
@@ -198,19 +193,20 @@
           </div>
           <div id="heart">
             <img src="img/about" alt="">
+            <div class="make_heart"></div>
           </div>
           <div class="aboutRight">
             <div>
               <h4>years of experience</h4>
-              <h2 class="count1"></h2>
+              <h2 class="count" data-count="0">0</h2>
             </div>
             <div>
               <h4>level of contribution</h4>
-              <div><h2 class="count2">100</h2><h2 class="per">%</h2></div>
+              <div><h2 class="count" data-count="100">100</h2><h2 class="per">%</h2></div>
             </div>
             <div>
               <h4>projects done</h4>
-              <h2 class="count3"></h2>
+              <h2 class="count" data-count="5">5</h2>
             </div>
           </div>
         </div>
@@ -221,75 +217,95 @@
   <div class="contentFront" id="frontend">
     <div class="title">
       <h2>Front-end</h2>
-      <!-- <a href="../sub/front1.html" id="detail" class="link">see front-end detail</a> -->
+      <a href="../sub/front1.html" id="detail" class="link">see front-end detail</a>
     </div>
+    <ul class="fe_btn">
+      <li data-alt="tab1" class="active">Project 1</li>
+      <li data-alt="tab2">Project 2</li>
+      <li data-alt="tab3">Project 3</li>
+      <li data-alt="tab4">Project 4</li>
+    </ul>
 
     <div class="frontImgs">
       <div>
         <a href="sub/front.html">
           <div class="frontProject front1 another-link">
             <div class="frontVideo">
-              <iframe src="mac.html" frameborder="0"></iframe>
             </div>
             <!-- <div class="back"></div> -->
           </div>
         </a>
         <div class="frontTxt">
-          <p><b>React</b><b>router</b><b>redux</b><b>json server</b><b>heroku</b></p>
+          <!-- <p><b>React</b><b>router</b><b>redux</b><b>json server</b><b>heroku</b></p> -->
+          <p>TBU</p>
           <h3></h3>
-        </div>
-      </div>
-
-      <div>
-        <a href="sub/front.html">
-          <div class="frontProject front2 another-link">
-            <div class="frontVideo">
-            </div>
-            <div class="back"></div>
-          </div>
-        </a>
-        <div class="frontTxt">
-          <p><b>React</b><b>api</b><b>github</b></p>
-          <h3></h3>
-        </div>
-      </div>
-
-      <div>
-        <a href="sub/front.html">
-          <div class="frontProject front3 another-link">
-            <div class="frontVideo">
-              <video muted autoplay loop playsinline data-keepplaying>
-                <source src="front/shop.mp" type="video/mp4">
-              </video>
-            </div>
-            <!-- <div class="back"></div> -->
-          </div>
-        </a>
-        <div class="frontTxt">
-          <p><b>vanilla javascript</b><b>localstorage</b><b>github</b></p>
-          <h3>shop</h3>
-        </div>
-      </div>
-
-      <div>
-        <a href="sub/front4.html">
-          <div class="frontProject front4 another-link">
-            <div class="frontVideo">
-              <video muted autoplay loop playsinline data-keepplaying>
-                <source src="front/mypage.mp" type="video/mp4">
-              </video>
-            </div>
-            <!-- <div class="back"></div> -->
-          </div>
-        </a>
-        <div class="frontTxt">
-          <p><b>vanilla javascript</b><b>localstorage</b><b>github</b></p>
-          <h3>mypage</h3>
         </div>
       </div>
     </div>
   </div>
 
+  <section id="section4" class="area">
+    <div class="rel">
+      <div class="sec-title">
+        <h2>Publishing</h2>
+      </div>
+      <div class="contents plan-con">
+        <ul class="plan-con-list">
+          <li class="plan-list-inner">
+            <div>
+              <h3><strong>젝시믹스</strong>Xexymix</h3>
+              <ul>
+                <li><a href="media/planning/plan1-1.pdf" target="_blank">와이어프레임</a></li>
+                <li><a href="media/planning/plan1-2.pdf" target="_blank">메타포아이콘 구상보고서</a></li>
+                <li><a href="media/planning/plan1-3.pdf" target="_blank">메타포아이콘 제작</a></li>
+                <li><a href="media/planning/plan1-4.pdf" target="_blank">스타일가이드</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="plan-list-inner">
+            <div>
+              <h3><strong>캐리비안베이</strong>Carribian Bay</h3>
+              <ul>
+                <li><a href="media/planning/plan2-1.pdf" target="_blank">스토리보드</a></li>
+                <li><a href="media/planning/plan2-2.pdf" target="_blank">와이어프레임</a></li>
+                <li><a href="media/planning/plan2-3.pdf" target="_blank">시안제작</a></li>
+                <li><a href="media/planning/plan2-4.pdf" target="_blank">산출물 보고서</a></li>
+                <li><a href="media/planning/plan2-5.pdf" target="_blank">프로젝트완료 보고서</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="plan-list-inner">
+            <div>
+              <h3><strong>생활코딩</strong>Open Tutorials</h3>
+              <ul>
+                <li><a href="media/planning/plan3-1.pdf" target="_blank">와이어프레임</a></li>
+                <li><a href="media/planning/plan3-2.pdf" target="_blank">시안제작</a></li>
+                <li><a href="media/planning/plan3-3.pdf" target="_blank">모니터링 수정 보고서</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="plan-list-inner">
+            <div>
+              <h3><strong>서울대학교병원</strong>SNUH</h3>
+              <ul>
+                <li><a href="media/planning/plan4-1.pdf" target="_blank">와이어프레임</a></li>
+                <li><a href="media/planning/plan4-2.pdf" target="_blank">시안제작</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="plan-list-inner">
+            <div>
+              <h3><strong>개인 포트폴리오</strong>Portfolio 2024</h3>
+              <ul>
+                <li><a href="media/planning/plan5-1.pdf" target="_blank">관찰조사보고서</a></li>
+                <li><a href="media/planning/plan5-2.pdf" target="_blank">시나리오제작</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <div class="content3" id="publishing">
     <div class="publishing">
@@ -482,7 +498,7 @@
       <div class="title">
         <h2>Mobile Web</h2>
         <div>
-          <a href="../sub/mobile.html" id="detail" class="link">see mobile web detail</a>
+          <a href="sub/mobile.html" id="detail" class="link">see mobile web detail</a>
           <a href="#none" class="mPcbtn link" id="mobileWebBtn">Mobile view</a>
         </div>
       </div>
@@ -521,12 +537,96 @@
           <iframe src="mobile/gift.html" frameborder="0"></iframe>
         </div>
         <div class="screen3">
-          <iframe src="site/search.html" frameborder="0"></iframe>
+          <iframe src="mobile/search.html" frameborder="0"></iframe>
         </div>
       </div>
     </div>
   </div>
 
+  <section id="section3" class="area">
+    <div class="rel">
+      <div class="sec-title">
+        <h2>Design</h2>
+        <div class="design-btn">
+          <button class="active">Graphic Design</button>
+          <button>UXUI Design</button>
+        </div>
+      </div>
+      <div class="contents design-con">
+        <div class="contents design-con-inner">
+          <div class="design-list">
+            <div class="graphic-part active">
+              <div class="d-thumbnail-1">
+                <div class="d-thumbnail">
+                  <img src="media/design/g1.png" alt="graphic1">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g2.png" alt="graphic2">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g3.png" alt="graphic3">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g4.png" alt="graphic4">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g5.png" alt="graphic5">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g6.png" alt="graphic6">
+                </div>
+              </div>
+              <div class="d-thumbnail-2">
+                <div class="d-thumbnail">
+                  <img src="media/design/g7.png" alt="graphic7">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g8.png" alt="graphic8">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g9.png" alt="graphic9">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g10.png" alt="graphic10">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g11.png" alt="graphic11">
+                </div>
+              </div>
+            </div>
+            <div class="UXUI-part">
+              <div class="d-thumbnail-1">
+                <div class="d-thumbnail">
+                  <img src="media/design/g12.png" alt="uxui1">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g13.png" alt="uxui2">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g14.png" alt="uxui3">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g15.png" alt="uxui4">
+                </div>
+              </div>
+              <div class="d-thumbnail-2">
+                <div class="d-thumbnail">
+                  <img src="media/design/g16.png" alt="uxui5">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g17.png" alt="uxui6">
+                </div>
+                <div class="d-thumbnail">
+                  <img src="media/design/g18.png" alt="uxui7">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
 
 
   <div class="content2" id="design">
@@ -862,15 +962,17 @@
 
 
   <!-- Script Source -->
-  <script src="js/jquery-3.6.1.min.js"></script>
-	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="js/prefixfree.min.js"></script>
-  <script src="js/jquery-migrate-1.4.1.min.js"></script>
+  <script src="js/jquery-migrate-1.4.1.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="js/mouse.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <script src="js/jquery.easeScroll.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

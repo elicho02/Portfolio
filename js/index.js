@@ -299,7 +299,155 @@ $(document).ready(function(){
   }
   },1000)
 
+  $('.fe_btn li').click(function () {
+    // 현재 클릭한 탭에 'active' 클래스 추가
+    $('.fe_btn li').removeClass('active');
+    $(this).addClass('active');
+
+    // 해당 탭의 텍스트 콘텐츠만 보여주기
+    var tabId = $(this).data('alt');
+    $('.item_info li').removeClass('active');
+    $('#' + tabId).addClass('active');
+
+    // desk_only 이미지도 해당 탭에 맞는 이미지만 활성화
+    $('.desk_only li').removeClass('active');
+    $('.desk_only li#' + tabId).addClass('active');
+  });
+
+
+    $('.count').each(function () {
+      //각각의 요소들을 반복적으로 순회
+      let crt = $(this);
+      let countTo = crt.attr('data-count');
+      //console.log(countTo);
+
+      $({
+        countNum: crt.text(),
+      }).animate(
+        {
+          countNum: countTo,
+        },
+        {
+          duration: 3000,
+          easing: 'linear',
+          step: function () {
+            crt.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            crt.text(this.countNum);
+          },
+        }
+      );
+    });
+    
 
 /* console.log(document.querySelector('.intro-logo').getTotalLength()); */
 
 });
+ //스크롤 애니메이션 효과
+    (function () {
+    let funcObj = {
+        f_0: function () {
+        const tl = gsap.timeline();
+        tl.from('header .title h1', {
+            opacity: 0,
+            y: -100,
+        });
+        tl.from('header .title p', {
+            opacity: 0,
+            y: 30,
+            stagger: 0.3,
+        });
+        },
+        f_1: function () {
+        const tl = gsap.timeline();
+        tl.from('.content1 .aboutTitle', {
+            opacity: 0,
+            y: -100,
+        });
+        tl.from('.content1 .aboutLeft', {
+            opacity: 0,
+            y: -30,
+        });
+        tl.from('.content1 .aboutRight', {
+            opacity: 0,
+            x: 500,
+            stagger: {
+            amount: 0.3,
+            from: 'random',
+            },
+        });
+        },
+        f_3: function () {
+        const tl = gsap.timeline();
+        tl.from('.contentFront .title', {
+            opacity: 0,
+            y: -100,
+            stagger: 0.3,
+        });
+        tl.from('.contentFront .fe_btn', {
+            opacity: 0,
+            y: -30,
+            stagger: {
+            amount: 0.5,
+            from: 'random',
+            },
+            y: 100,
+            invalidateOnRefresh: true,
+        });
+        },
+        f_4: function () {
+        const tl = gsap.timeline();
+        tl.from('.content3 .pulishing .title', {
+            opacity: 0,
+            y: -100,
+        });
+        tl.from('.content3 .pulishing .swiper-wrapper', {
+          opacity: 0,
+          y: -30,
+          stagger: {
+            amount: 0.5,
+            from: 'random',
+            },
+            invalidateOnRefresh: true,
+        });
+        },
+        f_5: function () {
+        const tl = gsap.timeline();
+        tl.from('.content4 .responsive .title', {
+            opacity: 0,
+            y: -100,
+        });
+        tl.from('.content4 .responsive .page', {
+          opacity: 0,
+          y: 30,
+          stagger: 0.3,
+        });
+        },
+    };
+
+    let section = document.querySelectorAll('section');
+
+    funcObj['f_0'](); //스크롤과 상관없이 첫번째는 먼저 실행이 되게 함
+
+    window.addEventListener('scroll', function () {
+        let scroll = document.scrollingElement.scrollTop;
+
+        for (let i = 0; i < section.length; i++) {
+        //스크롤이 되었을때 섹션이 뷰포트에 들어왔으면 그때 섹션함수를 실행함
+        //console.log('높이',section[i].offsetTop)
+        //console.log('스크롤높이',scroll)
+
+        if (scroll == section[i].offsetTop) {
+            funcObj['f_' + i]();
+            //console.log(i)
+        }
+        }
+    });
+    })();
+
+    
+  
+
+
+

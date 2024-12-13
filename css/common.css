@@ -22,6 +22,7 @@ html, body{
 html{
   overflow-y: scroll;   /* 문서전체에 세로 스크롤바 항상 표시 */
   overflow-x: hidden;   /* 문서전체에 가로 스크롤바 항상 숨김 */
+  font-size: 6.25%
 }
 
 body{font-family: 'Noto Sans KR', sans-serif;}
@@ -38,11 +39,11 @@ a{
   text-decoration: none;    /* 하이퍼링크 밑줄 없애기 */
   color: inherit;    /* 하이퍼링크의 글자색 부모한테 상속받기 */
 }
-/* !!a는 색상을 바꾸려면 꼭 a태그까지 들어와야 하는 번거로움을 없애줌!! */
+
 
 h1,h2,h3,h4,h5,h6{
   font-size: 100%;    /* 제목 태그들에 글자크기를 초기화하여 앞으로 부여하는 크기의 기준을 똑같이 설정함 */
-  font-weight: normal;    /* 기본굵기 제거 */
+  font-weight: normal;   
   margin-top: 0;    /* 기본마진 중 위쪽마진이 큰편이어서 제거 */
 }
 
@@ -77,10 +78,3 @@ input, select{vertical-align: middlle;}   /* 문자와 나란히 입력박스를
   display: block;
   text-indent: -9999px;
 }
-
-
-/* 
-################################################################
-################################################################
-################################################################
- */
