@@ -1,0 +1,31 @@
+@import url(reset.css);
+@import url(font.css);
+
+/* Slide horizontal Animation */
+.slide-horizontal {
+  width: 940px;
+  height: 430px;
+  position: relative;
+  margin: auto;
+  overflow: hidden; 
+}
+.slide-horizontal-items { /* 보여지는 슬라이드 영역 */
+  width: 4700px; /* 5개의 총가로너비(940*5) 가로방향일때만 */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Slide vertical Animation */
+.slide-vertical {
+  width: 940px;
+  height: 430px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden; 
+}
+.slide-vertical-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

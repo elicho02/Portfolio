@@ -5,10 +5,10 @@
 html {height: -webkit-fill-available;}
 ::-webkit-scrollbar {display: none;}
 body{
-  font-family: 'ClarityCity';
+  font-family: "Noto Serif Display";
   font-weight: 400;
-  background: #F6F2EE;
-  color: #363432;
+  background: #041E3A;
+  color: #fff;
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
@@ -41,14 +41,14 @@ header nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #363432;
+  color: #fff;
   transition: 0.3s;
 }
 header nav ul a i{font-size: 20px;}
 header .logo a{
   display: inline-block;
-  background: url(../img/logo_b.svg) no-repeat center center;
-  width: 140px;
+  background: url(../img/polo-ralph-lauren.svg) no-repeat center center;
+  width: 200px;
   height: 30px;
   margin-top: 2px;
   transition: 0.3s;
@@ -71,6 +71,7 @@ header .menu{
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
+  color: #fff;
 }
 .menuText ul li{
   font-family: 'Assassin';
@@ -215,7 +216,7 @@ input::-webkit-search-results-decoration{
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
-  color: #363432;
+  color: #d8d8d8;
   font-size: 14px;
   line-height: 19px;
 }
@@ -226,7 +227,7 @@ input::-webkit-search-results-decoration{
 footer{
   width: 100%;
   height: 300px;
-  background: #363432;
+  background-color: #D9BA54;
   color: #fff;
   padding: 30px;
   position: relative;
@@ -242,7 +243,7 @@ footer ul{
   justify-content: space-evenly;
   text-transform: uppercase;
   font-size: 13px;
-  color: #d4d0cb;
+  color: #2e2e2e;
   position: absolute;
   bottom: 130px;
   left: 50%;
@@ -251,7 +252,7 @@ footer ul{
 footer p{
   font-size: 11px;
   text-align: center;
-  color: #aca8a4;
+  color: #2c2c2c;
   position: absolute;
   left: 50%;
   bottom: 40px;

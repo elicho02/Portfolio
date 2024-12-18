@@ -1,0 +1,56 @@
+@import url(reset.css);
+@import url(font.css);
+
+.fade{
+  position:relative;
+  width: 1000px;
+  height: 350px;
+  margin:auto;
+}
+
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.fade-items ul li{
+  display: none;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+/* (2)첫번째 이미지만 보임 */
+.fade-items ul li:first-child{display: block;}
+
+/* Indicator */
+.fade-indicator{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.fade-indicator a{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-indent: -9999px;
+}
+.fade-indicator a.active{background-color: #000;}
+
+/* Prev Next  Button */
+.fade-side .icon{
+  font-size: 60px;
+  color: #333;
+}
+.fade-side .prev,
+.fade-side .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fade-side .prev{left: 30px;}
+.fade-side .next{right: 30px;}
+.fade-side .prev:hover,
+.fade-side .next:hover{opacity: 0.5;}

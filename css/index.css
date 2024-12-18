@@ -140,6 +140,7 @@ button:hover:after {
   width: 500px;
   border-radius: 50%;
   border: 8px solid;
+  z-index: -1;
 }
 
 #center {
@@ -149,7 +150,6 @@ button:hover:after {
   width: 1px;
   height: 1px;
   border-radius: 50%;
-  z-index: 2;
 }
 
 #hour {
@@ -162,6 +162,7 @@ button:hover:after {
   border-radius: 5px;
   background-color: #EB6C8A;
   transform-origin: bottom;
+  z-index: 2;
 }
 
 #min {
@@ -174,6 +175,7 @@ button:hover:after {
   border-radius: 5px;
   background-color: #EB6C8A;
   transform-origin: bottom;
+  z-index: 100;
 }
 
 #sec {
@@ -186,6 +188,7 @@ button:hover:after {
   border-radius: 3px;
   background-color: red;
   transform-origin: bottom;
+  z-index: 100;
 }
 
 
@@ -334,6 +337,8 @@ header button{
 
 .mobileVer i {
   font-size: 25px;
+  color: #4D3A36;
+  cursor: pointer;
 }
 
 /* header */
@@ -522,9 +527,9 @@ header .title div p:hover:after {
 }
 
 .about {
-  padding: 170px 160px;
-  background-color: #4D3A36;
-  color: #FEF0CB;;
+  padding: 120px 100px;
+  background-color: #fff9fc;
+  color: #4D3A36;
 }
 
 .about>div {
@@ -556,7 +561,6 @@ header .title div p:hover:after {
 #heart {
   flex-direction: row;
   margin-top: 200px;
-  border: 2px solid #333;
 }
 .make_heart{
   margin: 0 auto;
@@ -664,6 +668,7 @@ header .title div p:hover:after {
   width: 100%;
   height: auto;
   padding: 170px 160px;
+  background-color: #fff9fc;
 }
 
 .contentFront .title {
@@ -692,7 +697,9 @@ header .title div p:hover:after {
   transition: 0.35s;
 }
 
-
+.material-symbols-outlined{
+  transform: translateY(6px);
+  text-align: center;}
 .fe_btn {
   font-weight: 500;
   font-family: 'Pretendard';
@@ -714,6 +721,11 @@ header .title div p:hover:after {
 }
 
 .fe_btn li.active {
+  background-color: #EB6C8A;
+  color: #fff;
+}
+
+.fe_btn li:hover{
   background-color: #EB6C8A;
   color: #fff;
 }
@@ -1175,7 +1187,7 @@ header .title div p:hover:after {
   width: 100%;
   padding: 170px 160px 250px;
   position: relative;
-  background: #eddfcd;
+  background-color: #fff9fc;
 }
 
 .content4 .title {
@@ -1374,257 +1386,97 @@ header .title div p:hover:after {
   margin-left: 25px;
 }
 
-/*🎉✨section3-design____________________ */
-#section3{
+section {
   width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-color: #4D3A36;
-}
-#section3 .rel {
-  display: flex;
-  flex-direction: column;
-  row-gap: 50rem;
-}
-
-#section3 .rel .sec-title .design-btn {
-  display: flex;
-  align-self: center;
-}
-
-#section3 .rel .sec-title .design-btn button {
-  background-color: #fffff0;
-  border: 2px solid #1E1E1A;
-  border-radius: 32rem;
-  color: #1E1E1A;
-  font-size: 30rem;
-  padding: 10px 20px;
-  text-align: center;
-  display: inline-block;
-  margin: 0 10rem;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-#section3 .rel .sec-title .design-btn button.active {
-  background-color: #1E1E1A;
-  color: #fffff0;
-  pointer-events: none;
-}
-
-#section3 .rel .sec-title .design-btn button:hover {
-  background-color: #888;
-}
-
-#section3 .rel .design-con {
-  position: relative;
-  overflow: hidden;
-}
-
-#section3 .rel .design-con .design-con-inner {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list {
+section .rel {
+  width: calc(100% - 120rem);
+  height: calc(100% - 120rem);
+  z-index: 1;
+  padding: 10rem;
+}
+
+
+section .rel .contents {
+  width: 100%;
+  height: 100%;
+}
+
+/*🎉✨section3-design____________________ */
+#design{
+  background-color: #fff9fc;
+  width: 100%;
+  height: 100vh;
+}
+#design .rel {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50rem;
+}
+
+
+#design .rel .design-con {
+  position: relative;
+  overflow: hidden;
+}
+
+#design .rel .design-con .design-con-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#design .rel .design-con .design-con-inner .design-list {
   width: fit-content;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .graphic-part,
-#section3 .rel .design-con .design-con-inner .design-list .UXUI-part {
+#design .rel .design-con .design-con-inner .design-list .graphic-part,
+#design .rel .design-con .design-con-inner .design-list .UXUI-part {
   display: none;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .graphic-part.active,
-#section3 .rel .design-con .design-con-inner .design-list .UXUI-part.active {
+#design .rel .design-con .design-con-inner .design-list .graphic-part.active,
+#design .rel .design-con .design-con-inner .design-list .UXUI-part.active {
   display: block;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1,
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-2 {
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail-1,
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 40rem;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail-1 {
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail-1 {
   margin-bottom: 40rem;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail {
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail {
   cursor: pointer;
   width: 360rem;
   height: 220rem;
   overflow: hidden;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail:hover img {
   scale: 1.2;
 }
 
-#section3 .rel .design-con .design-con-inner .design-list .d-thumbnail img {
+#design .rel .design-con .design-con-inner .design-list .d-thumbnail img {
   transition: 0.5s ease-in-out;
 }
 
-/*🎉✨section4-planning____________________ */
-#section4 .rel {
-  display: flex;
-  flex-direction: column;
-  row-gap: 50rem;
-}
-
-#section4 .rel .plan-con {
-  padding: 30rem 0;
-  overflow: hidden;
-}
-
-#section4 .rel .plan-con .plan-con-list {
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20rem;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner {
-  overflow: hidden;
-  width: 5%;
-  flex: 0.05;
-  height: 60%;
-  transition: flex 1s, height 0.5s 0.5s;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(1) div {
-  background-image: url("../media/planning/plan1.png");
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(2) div {
-  background-image: url("../media/planning/plan2.png");
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(3) div {
-  background-image: url("../media/planning/plan3.png");
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(4) div {
-  background-image: url("../media/planning/plan4.png");
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:nth-of-type(5) div {
-  background-image: url("../media/planning/plan5.png");
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div {
-  display: flex;
-  text-align: center;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 60rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  color: #fffff0;
-  position: relative;
-  filter: grayscale(100%);
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  display: block;
-  width: 80%;
-  height: 90%;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transition: opacity 1ms 0s;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div h3 {
-  display: inline-block;
-  font-size: 60rem;
-  font-family: "Playfair Display", sans-serif;
-  position: relative;
-  cursor: default;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div h3 strong {
-  font-family: "Pretendard-Regular", sans-serif;
-  display: block;
-  font-size: 24rem;
-  font-weight: 100;
-  margin-bottom: 30rem;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div h3::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  translate: -50% -50%;
-  width: 50rem;
-  height: 3rem;
-  background: #fffff0;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div ul {
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 10rem;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div ul li {
-  width: 50%;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div ul li a {
-  border: 1px solid #fffff0;
-  display: inline-block;
+#publishing{
+  height: 100vh;
   width: 100%;
-  padding: 7rem 0;
 }
 
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div ul li a:hover {
-  background-color: #fffff0;
-  color: #1E1E1A;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div h3,
-#section4 .rel .plan-con .plan-con-list .plan-list-inner>div ul {
-  opacity: 0;
-  transition: opacity 1ms 0s;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover {
-  flex: 1;
-  height: 100%;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div {
-  filter: grayscale(0%);
-  transition: filter 0.7s;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div h3,
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div ul {
-  opacity: 1;
-  transition: opacity 1s 1s;
-}
-
-#section4 .rel .plan-con .plan-con-list .plan-list-inner:hover div::before {
-  opacity: 1;
-  transition: opacity 1s 1s;
-}
-/* //////////////////////////////////
 
 /* plan */
 
@@ -1964,6 +1816,7 @@ footer .footer svg {
     font-size: 18px;
     line-height: 30px;
     margin: 40px 50px;
+    color: #eddfcd;
   }
 
   .close {
@@ -1974,6 +1827,7 @@ footer .footer svg {
 
   .close i {
     font-size: 32px;
+    cursor: pointer;
   }
 
   /* intro */
@@ -2272,12 +2126,18 @@ footer .footer svg {
     height: 10px;
   }
 
+  #heart {display: none;}
+  
+  
+
+
+
   /* Front-end */
   .contentFront {
     width: 100%;
     height: auto;
     padding: 80px 50px;
-    background-color: #eddfcd;
+    background-color: #fff9fc;
   }
 
   .contentFront .title {
@@ -2562,7 +2422,7 @@ footer .footer svg {
     width: 100vw;
     padding: 80px 50px 140px;
     position: relative;
-    background-color: #eddfcd;
+    background-color: #fff9fc;
   }
 
   .content4 .title {

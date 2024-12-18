@@ -35,13 +35,11 @@ $(document).ready(function(){
     if (docuTop > 1219 && docuTop < 2451) {
       $('.skill li:nth-child(1) div span').css({ width: '85%' });
       $('.skill li:nth-child(2) div span').css({ width: '80%' });
-      $('.skill li:nth-child(3) div span').css({ width: '55%' });
+      $('.skill li:nth-child(3) div span').css({ width: '85%' });
       $('.skill li:nth-child(4) div span').css({ width: '70%' });
-      $('.skill li:nth-child(5) div span').css({ width: '60%' });
+      $('.skill li:nth-child(5) div span').css({ width: '65%' });
       $('.skill li:nth-child(6) div span').css({ width: '80%' });
       $('.skill li:nth-child(7) div span').css({ width: '90%' });
-      $('.skill li:nth-child(8) div span').css({ width: '85%' });
-      $('.skill li:nth-child(9) div span').css({ width: '65%' });
     } else {
       $('.skill li div span').css({ width: '0%' });
     }
@@ -351,7 +349,8 @@ $(document).ready(function(){
         const tl = gsap.timeline();
         tl.from('header .title h1', {
             opacity: 0,
-            y: -100,
+            y: 30,
+            delay: 1,
         });
         tl.from('header .title p', {
             opacity: 0,
@@ -368,10 +367,11 @@ $(document).ready(function(){
         tl.from('.content1 .aboutLeft', {
             opacity: 0,
             y: -30,
+            stagger: 0.3,
         });
         tl.from('.content1 .aboutRight', {
             opacity: 0,
-            x: 500,
+            x: 300,
             stagger: {
             amount: 0.3,
             from: 'random',
@@ -426,7 +426,7 @@ $(document).ready(function(){
         },
     };
 
-    let section = document.querySelectorAll('section');
+    let section = document.querySelectorAll('div');
 
     funcObj['f_0'](); //스크롤과 상관없이 첫번째는 먼저 실행이 되게 함
 

@@ -1,0 +1,49 @@
+@import url(reset.css);
+@import url(font.css);
+
+/* Slider Layout */
+.slider{
+  position: relative; 
+  overflow: hidden;
+}
+.slider .slide-list {
+  height: 500px;
+  position: relative;  /* ul를 기준으로 li의 위치설정 */
+}
+.slider .slide-list li{ 
+  position: absolute;
+	width: 100%;
+	height: 100%;
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.slider .slide-list li:nth-child(1){background-color: yellowgreen;}
+.slider .slide-list li:nth-child(2){background-color: gold;}
+.slider .slide-list li:nth-child(3){background-color: royalblue;}
+.slider .slide-list li:nth-child(4){background-color: orchid;}
+
+/* Indicator(하단버튼)  */
+.slider .slide-indicator{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
+}
+.slider .slide-indicator a{
+  width: 80px;
+  height: 6px;
+  background-color: #fff;
+  display: flex;
+  text-indent: -9999px;
+}
+.slider .slide-indicator a.active{
+  background: #000;
+}

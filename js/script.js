@@ -172,7 +172,7 @@
 
         //✨✨active바뀔때마다 애니메이션효과로 등장
         const Dthumbnail = document.querySelectorAll(
-        '#section3 .design-list .d-thumbnail'
+        '#design .design-list .d-thumbnail'
         );
         gsap.from(Dthumbnail, {
         opacity: 0,

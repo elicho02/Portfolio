@@ -5,38 +5,9 @@
 ::-webkit-scrollbar {display: none;}
 
 
-/* cursor */
-@media only screen and (min-width:769px) {
-	body, a{cursor: none;}
-	.cursor{
-		position: fixed;
-		left: 0;
-		top: 0;
-		pointer-events: none;
-	}
-	.cursor--small{
-		width: 18px;
-		height: 18px;
-		left: -9px;
-		top: -9px;
-		border-radius: 50%;
-		z-index: 99;
-		background: #EDDFCD;
-    mix-blend-mode: difference;
-	}
-	.cursor--canvas{
-		width: 100vw;
-		height: 100vh;
-		z-index: 100;
-	}
-}
 
 
-@media only screen and (max-width:768px) {
-	body{cursor: none;}
-	.cursor--small,
-  .cursor--canvas{display: none;}
-}
+
 
 .mobileVer{display: none;}
 
@@ -162,11 +133,7 @@ nav{
   left: 50%;
   transform: translateX(-50%);
 }
-.logo a div{
-  width: 115px;
-  height: 48px;
-  background: url(../img/logo.svg) no-repeat center center;
-}
+
 
 
 /* detail */
